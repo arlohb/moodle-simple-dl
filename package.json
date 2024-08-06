@@ -2,6 +2,9 @@
   "name": "project-name",
   "module": "src/main.ts",
   "type": "module",
+  "scripts": {
+    "build": "bun build src/main.ts --compile --outfile moodle-simple-dl"
+  },
   "devDependencies": {
     "@types/bun": "latest"
   },
