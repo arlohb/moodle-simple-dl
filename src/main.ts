@@ -12,6 +12,8 @@ if (outfolder.at(-1) === "/") {
 outfile = outfile ?? `${outfolder}/${decodeURI(url.split("/").at(-1)!)}`;
 await download(url, outfile, session);
 
+console.log(outfile);
+
 if (preview) {
     await $`${previewCmd} "${outfile}"`;
 }
