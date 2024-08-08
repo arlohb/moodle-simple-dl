@@ -6,7 +6,11 @@ export const download = async (
 ): Promise<void> => {
     const response = await fetch(
         url,
-        { headers: { Cookie: `MoodleSession=${session}` } },
+        {
+            headers: { Cookie: `MoodleSession=${session}` },
+            // Should indicate an invalid session token
+            redirect: "error",
+        },
     );
 
     Bun.write(
